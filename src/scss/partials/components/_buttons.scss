@@ -1,0 +1,107 @@
+.c-btn {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+
+    border: 0;
+    background: none;
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+}
+
+.c-btn input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.c-btn__wrap {
+    @extend %display-flex;
+    @extend %align-items-center;
+    @extend %justify-content-center;
+
+    height: 100%;
+}
+
+.c-btn__ico {
+    font-size: 0;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.c-btn__ico {
+    margin-left: 1rem;
+
+    &:first-child {
+        margin-right: 1rem;
+    }
+}
+
+.c-btn--hamburger {
+    display: none;
+
+    width: 60px;
+    height: 45px;
+    transform: rotate(0deg);
+    transition: transform .5s ease-in-out;
+}
+
+.c-btn--hamburger span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.c-btn--hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.c-btn--hamburger span:nth-child(2),
+.c-btn--hamburger span:nth-child(3) {
+    top: 18px;
+}
+
+.c-btn--hamburger span:nth-child(4) {
+    top: 36px;
+}
+
+.c-btn--hamburger.is-active span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.c-btn--hamburger.is-active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.c-btn--hamburger.is-active span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.c-btn--hamburger.is-active span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.c-link--alt {
+    font-size: 1.2rem;
+}
