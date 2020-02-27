@@ -3,8 +3,11 @@
 ========================================================================== */
 $color_white:       #fff;
 $color_black:       #000000;
-$color_gray:        #272727;
+$color_gray:        #555555;
+$color_lightGray:   #888888;
 $color_red:         #dc4e58;
+$color_lightRed:    #f7564b;
+ 
 
 $scotch-colors: (
     'black': (
@@ -21,8 +24,9 @@ $scotch-colors: (
 /* Fonts
 ========================================================================== */
 $font_raleway:        'Raleway';
+$font_montserrat:       'Montserrat';
 
-$font_normal:          $font_raleway, Arial, sans-serif;
+$font_normal:          $font_montserrat, Arial, sans-serif;
 
 /* Animations
 ========================================================================== */
