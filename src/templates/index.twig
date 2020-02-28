@@ -1,10 +1,16 @@
 {% extends "base.twig" %}
 
 {% block title %}
-    {{ title }}ss
+    {{ title }}
 {% endblock %}
 
 {% block body %}
     {% include 'partials/layouts/section-header.twig' %}
+    {% include 'partials/layouts/section-hero.twig' %}
+    <main>
+        {% include 'partials/layouts/section-stories.twig' %}
+    </main>
+    {% include 'partials/layouts/section-testimonials.twig' %}
+    {% include 'partials/layouts/section-contact.twig' %}
     {% include 'partials/layouts/section-footer.twig' %}
 {% endblock %}
