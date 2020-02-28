@@ -41,6 +41,11 @@
 
 /* Flexbox utilises
    ========================================================================== */
+
+.u-flex-container {
+    display:flex;
+}
+
 .u-align-items-center {
     align-items: center;
 }

@@ -5,8 +5,10 @@ $color_white:       #fff;
 $color_black:       #000000;
 $color_gray:        #555555;
 $color_lightGray:   #888888;
+$color_contactGray: #EDEDED;
 $color_red:         #dc4e58;
 $color_lightRed:    #f7564b;
+
  
 
 $scotch-colors: (
@@ -18,6 +20,9 @@ $scotch-colors: (
     ),
     'gray': (
         $color_gray
+    ),
+    'lightGray': (
+        $color_lightGray
     )
 );
 

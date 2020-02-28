@@ -1,4 +1,3 @@
-
 /* Inner
    ========================================================================== */
 
@@ -13,8 +12,84 @@
     padding-right: $gutter;
 }
 
+/* Header
+   ========================================================================== */
+
+.l-header {
+    width: 100vw;
+    position: fixed;
+    margin-top: 4%;
+}
+
+/* Sections
+   ========================================================================== */
+
+.l-section {
+    width: 100%;
+}
+
+.l-section--content {
+    width: 80%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-section--testimonials {
+    background-image: url("../../src/files/images/background_testimonials.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-height: 350px;
+}
+
+.l-section--contact {
+    padding-top:50px;
+    padding-bottom:50px;
+
+}
+
+.l-section--footer {
+    background-color: black;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+}
+
+/* Sections content differences
+   ========================================================================== */
+
+.l-content--testimonials {
+    flex-direction: column;
+
+
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
 /* Page
    ========================================================================== */
+
 .l-page {
     overflow: hidden;
+}
+
+.l-hero {
+    width: 100vw;
+    height: 100vh;
+
+    padding-top: 25vh;
+
+    background-image: url("../../src/files/images/background_hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Additional Containers
+   ========================================================================== */
+.l-contact--data {
+    width:350px;
 }
