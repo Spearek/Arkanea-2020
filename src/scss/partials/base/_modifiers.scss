@@ -58,6 +58,10 @@
     justify-content: space-between;
 }
 
+.u-justify-content-around {
+    justify-content: space-around;
+}
+
 .u-adapt {
     flex: 1;
 }
@@ -163,4 +167,22 @@
             }
         }
     }
+}
+
+/* Initial Carousel pagination bullets modification
+   ========================================================================== */
+
+.swiper-pagination-bullet {
+    background-color: $color_black;
+  }     
+
+.swiper-pagination-bullet-active {
+    background-color: $color_white;
+  } 
+  
+  /* Mobile navigation active
+   ========================================================================== */
+
+.u-nav--isActive {
+    transform: translateX(0);
 }

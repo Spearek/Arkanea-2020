@@ -50,11 +50,22 @@
 
 .c-btn--hamburger {
     display: none;
+    background: none;
+
+    top: 10px;
+    left:10px;
 
     width: 60px;
     height: 45px;
+
     transform: rotate(0deg);
     transition: transform .5s ease-in-out;
+
+    z-index: 400;
+
+    @include media("<=t-m") {
+        display:block;
+    }
 }
 
 .c-btn--hamburger span {

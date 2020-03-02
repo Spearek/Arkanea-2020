@@ -30,9 +30,10 @@ a {
 
     &:hover {
         text-decoration: none;
+        color: $color_lightRed;
 
         @include media(">t") {
-            color: $color_black;
+            color: $color_lightRed;
         }
     }
 }

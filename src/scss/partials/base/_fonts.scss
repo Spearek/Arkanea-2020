@@ -13,6 +13,43 @@ h3 {
     font-size: 3rem;
 
 }
+ 
+@include media("<=l") {
+    h1 {
+        font-size: 4.5rem;
+    }
+}
+
+@include media("<=t") {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    
+    }
+}
+
+@include media("<=m") {
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2.8rem;
+    }
+
+}
 
 /* FONT-TYPES
    ========================================================================== */

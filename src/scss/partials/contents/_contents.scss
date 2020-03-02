@@ -65,10 +65,8 @@
     }
 }
 
-// Sizes
-.t-content--alt {
-    font-size: 1.6rem;
-}
+/* Content font sizes
+========================================================================== */
 
 .t-content-regular {
     font-size: 2.4rem;
@@ -84,4 +82,15 @@
 
 .t-content-extraSmall {
     font-size: 1.4rem;
+}
+
+@include media("<=t") {
+
+    .t-content-regular {
+        font-size: 2.0rem;
+    }
+
+    .t-content-medium {
+        font-size: 1.8rem;
+    }
 }
