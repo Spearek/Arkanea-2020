@@ -1,31 +1,55 @@
 const form = document.querySelector('.js-form');
-const inputName = document.querySelector('input[name=contact-name]');
-const inputEmail = document.querySelector('input[name=contact-email]');
-const formArea = document.querySelector('textarea[name=contact-area]');
+const inputName = document.querySelector('input[name="contactName"]');
+const inputEmail = document.querySelector('input[name="contactEmail"]');
+const formArea = document.querySelector('textarea[name="contactArea"]');
 const errorMessage = document.querySelector('.js-error--message');
 
-console.log(formArea);
+const regCollection = {
+    contactName: /^[a-zA-z]{3,20}$/,
+    contactEmail: /^([a-zA-Z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+    contactArea: /^[^<>]{5,512}$/
+}
+
+function validate(field, regex) {
+    if (regex.test(field.value)) {
+        field.classList.remove('is-invalid');
+        field.classList.add('is-valid');
+    } else {
+        field.classList.remove('is-valid');
+        field.classList.add('is-invalid');
+    }
+}
+function submitValidation() {
+    let isValidate = ((regCollection.contactName.test(inputName.value)) && (regCollection.contactEmail.test(inputEmail.value)) && (regCollection.contactArea.test(formArea.value)));
+    console.log(isValidate)
+    if (isValidate) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+inputName.addEventListener('keyup', () => {
+    validate(inputName, regCollection.contactName);
+});
+
+inputEmail.addEventListener('keyup', () => {
+    validate(inputEmail, regCollection.contactEmail);
+});
+
+formArea.addEventListener('keyup', () => {
+    validate(formArea, regCollection.contactArea);
+});
+
 
 form.addEventListener("submit", event => {
     event.preventDefault();
-    let errorArray = [];
 
-    if (inputName.value.length <= 3) {
-        errorArray.push("Źle wypełnione imię");
-    }
-    const regMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (!regMail.test(inputEmail.value)) {
-        errorArray.push("Źle wypełnione pole email");
-    }
-    if (formArea.value.length <= 8) {
-        errorArray.push("Źle wypełniona treść wiadomości");
-    }
-    if (errorArray.length < 1) {
+    if (submitValidation()) {
         event.target.submit();
-    } else{
-        errorMessage.innerHTML = `<p>Błąd formularza, wystąpiły błędy: </p>
-        <ol>
-            ${errorArray.map(el =>`<li>${el}</li>`).join("")}
-        </ol>`;
+    } else {
+        errorMessage.textContent="Formularz niepoprawnie wypełniony. Proszę spróbować ponownie."
     }
-})
+
+});

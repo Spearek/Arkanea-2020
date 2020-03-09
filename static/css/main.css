@@ -808,12 +808,17 @@ select::-ms-expand {
     .c-form--contact textarea::placeholder {
       color: #888888;
       font-size: 1.2rem; }
+  .c-form--contact .is-valid {
+    border: 2px solid #43a047; }
+  .c-form--contact .is-invalid {
+    border: 2px solid #ef6c00; }
   .c-form--contact button {
     width: 45%;
     padding: 0;
     margin-top: 15px; }
   .c-form--contact .error-message {
     color: red;
+    font-size: 1rem;
     font-weight: 700;
     padding-top: 5px; }
 

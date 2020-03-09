@@ -23,7 +23,7 @@
     .c-form--hero {
         flex-direction: column;
 
-        input{
+        input {
             padding: 15px;
             margin-bottom: 25px;
         }
@@ -36,8 +36,8 @@
 .c-form--contact {
     width: 400px;
 
-    p{
-        width:100%;
+    p {
+        width: 100%;
     }
 
     input[type="text"],
@@ -49,48 +49,59 @@
         padding: 0 25px;
         margin-bottom: 15px;
         margin-right: 5%;
-        
-        &::placeholder {
-            color: $color_lightGray;
-            font-size: 1.2rem;
-        }
-    }
-    
-    textarea {
-        background-color: $color_contactGray;
-        width:95%;
-        padding-top:15px;
-        padding-left:15px;
 
         &::placeholder {
             color: $color_lightGray;
             font-size: 1.2rem;
         }
     }
-    button{
-        width:45%;
+
+    textarea {
+        background-color: $color_contactGray;
+        width: 95%;
+        padding-top: 15px;
+        padding-left: 15px;
+
+        &::placeholder {
+            color: $color_lightGray;
+            font-size: 1.2rem;
+        }
+    }
+
+    .is-valid {
+        border: 2px solid #43a047;
+    }
+
+    .is-invalid {
+        border: 2px solid #ef6c00;
+    }
+
+    button {
+        width: 45%;
 
         padding: 0;
         margin-top: 15px;
     }
+
     .error-message {
         color: red;
+        font-size: 1rem;
         font-weight: 700;
         padding-top: 5px;
     }
 }
 
 @include media("<=t-m") {
-    .c-form--contact{
-        width:100%;
+    .c-form--contact {
+        width: 100%;
         text-align: center;
 
         input[type="text"],
-        input[type="email"]{
+        input[type="email"] {
             padding-top: 25px;
             padding-bottom: 25px;
         }
-        
+
         textarea {
             padding: 25px;
         }
@@ -99,17 +110,17 @@
             width: 95%;
             padding: 15px;
             margin-bottom: 40px;
-        }       
+        }
     }
 }
 
 @include media("<=m-s") {
-    .c-form--contact{
+    .c-form--contact {
         justify-content: center;
 
         input[type="text"],
-        input[type="email"]{
-            width:95%;
+        input[type="email"] {
+            width: 95%;
             margin-right: 0;
         }
     }
